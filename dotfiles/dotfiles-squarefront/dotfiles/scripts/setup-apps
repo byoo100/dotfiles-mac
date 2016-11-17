@@ -1,0 +1,95 @@
+#!/bin/bash
+
+###############################################################################
+# setup-apps
+#
+# A shell script to automate application setup on Mac OS X.
+###############################################################################
+
+
+###############################################################################
+# Install fonts and applications with Homebrew cask
+###############################################################################
+echo "Homebrew: installing Homebrew Cask..."
+# brew install caskroom/cask/brew-cask # install Cask
+# brew tap caskroom/versions # install beta versions with Cask
+# brew tap caskroom/fonts # install fonts with Cask
+
+
+###############################################################################
+# Install fonts with Homebrew Cask
+###############################################################################
+# echo "Homebrew Cask: installing fonts..."
+# fonts=(
+#   font-source-sans-pro
+#   font-input
+#   font-roboto
+# )
+# brew cask install ${fonts[@]}
+
+
+###############################################################################
+# Install applications with Homebrew Cask
+###############################################################################
+echo "Homebrew Cask: installing apps..."
+brew cask install 1password
+brew cask install adobe-creative-cloud
+brew cask install alfred
+brew cask install atom
+brew cask install backblaze
+brew cask install boom
+brew cask install dash
+brew cask install docker
+# brew cask install dropbox
+brew cask install firefox
+brew cask install flux
+brew cask install framer
+brew cask install github-desktop
+brew cask install gitter
+# brew cask install google-cloud-sdk
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install hipchat
+brew cask install hyper
+brew cask install imageoptim
+brew cask install java
+brew cask install obs
+brew cask install omnidazzle
+brew cask install paparazzi
+brew cask install paw
+brew cask install postman
+brew cask install private-internet-access
+brew cask install rescuetime
+brew cask install screenflow
+brew cask install screenhero
+brew cask install sketch
+brew cask install sketch-toolbox
+brew cask install skype
+brew cask install slack
+brew cask install spectacle
+brew cask install spotify
+brew cask install sublime-text
+brew cask install teamviewer
+brew cask install textexpander
+brew cask install toggldesktop
+
+
+###############################################################################
+# Launch apps from Alfred
+###############################################################################
+# echo "Homebrew Cask: linking apps to Alfred..."
+# brew cask alfred link
+
+
+###############################################################################
+# Copy application preferences & config files with Mackup
+###############################################################################
+# echo "Mackup: restoring application preferences..."
+# mackup restore
+
+
+###############################################################################
+# Cleanup
+###############################################################################
+brew cask cleanup
+echo "macOS Apps Done Setup!"
